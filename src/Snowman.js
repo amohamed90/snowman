@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Snowman.css";
+import { randomWord, ENGLISH_WORDS } from "./words";
 import img0 from "./0.png";
 import img1 from "./1.png";
 import img2 from "./2.png";
@@ -56,7 +57,7 @@ function Snowman({maxWrong, images, words}) {
   /** render: render game */
   return (
     <div className="Snowman">
-      <img src={images[nWrong]}/>
+      <img src={images[nWrong]} alt={`img${nWrong}`}/>
       <p className="Snowman-word">{guessedWord()}</p>
       <p>{generateButtons()}</p>
     </div>
